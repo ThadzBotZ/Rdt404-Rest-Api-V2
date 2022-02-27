@@ -273,7 +273,7 @@ router.get('/remove', (req, res, next) => {
 router.get('/china', async (req, res, next) => {
   var apikeyInput = req.query.apikey;
   if(!apikeyInput) return res.json(loghandler.notparam)
-  if(`listkey`.includes(apikeyInput)) {
+  if(listkey.includes(apikeyInput)) {
     const china = JSON.parse(fs.readFileSync(__path +'/cecan/china.json'));
     const China = china[Math.floor(Math.random() * china.length)];
     let hasil = China.url;
