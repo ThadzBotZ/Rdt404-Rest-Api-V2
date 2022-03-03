@@ -602,10 +602,10 @@ router.get('/nsfw/ass', async (req, res, next) => {
 })
 
 router.get('/nsfw/ahegao', async (req, res, next) => {
-        var apikeyInput = req.query.apikey
+        //var apikeyInput = req.query.apikey
             
-	if(!apikeyInput) return res.json(loghandler.notparam)
-	if (apikeyInput != 'APIKEY')  return res.json(loghandler.invalidKey)
+	//if(!apikeyInput) return res.json(loghandler.notparam)
+	//if (apikeyInput != 'APIKEY')  return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/ahegao.json`))
         .then(response => response.json())
